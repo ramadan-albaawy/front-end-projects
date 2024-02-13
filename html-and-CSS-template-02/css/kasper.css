@@ -24,7 +24,7 @@ ul {
 /* global rules  */
 /* var section  */
 :root {
-    --section-padding : 30px;
+    --section-padding : 45px;
     --main-color: #00c7fc;
     --transparent-color: rgb(15 116 143 / 70%);
     --text-fade-color: #777 ;
@@ -66,10 +66,13 @@ ul {
 .section-name h1 {
     font-weight: normal;
     font-size: 40px;
-    margin-bottom: 60px;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 2px;
+    width: fit-content;
+    margin: 0px auto 44px;
+    border-bottom: 2px solid black;
+    padding-bottom: 16px;
 }
 .section-name h1::after {
     content: "";
@@ -79,19 +82,9 @@ ul {
     background-color: white;
     border-radius: 50%;
     border: 2px solid black;
-    bottom: -30px;
+    bottom: -11px;
     left: 50%;
     transform: translateX(-50%);
-}
-.section-name h1::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background: black;
-    width: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -20px;
 }
 .section-name h1+p {
     color: var(--text-fade-color);
@@ -265,7 +258,8 @@ header nav > i::before {
     transform: translateY(-50%);
     color: white;
     line-height: 1.3;
-}
+} 
+
 @media (max-width:767px) {
     .land .text {
     background-color: var(--transparent-color);
@@ -281,6 +275,13 @@ header nav > i::before {
     .land i.left {
         display: none;
     }
+}
+@media (min-width:1030px) {
+    .land .text {
+        width: 60%;
+        padding-left: 115px;
+    }
+    
 }
 .land .text h1 + p {
     color: var(--text-fade-color);
@@ -385,7 +386,6 @@ header nav > i::before {
 .design-features .text {
     background-color: var(--transparent-color);
     position: absolute;
-    padding: 50px;
     color: white;
     line-height: 1.3;
     right: 0;
@@ -396,12 +396,13 @@ header nav > i::before {
 .design-features .text h1 {
     font-weight: normal;
     margin: 0;
-    font-size: 24px;
-    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 40px;
+    padding-left: 10px;
 }
 .design-features .text ul {
-    padding: 0;
+    padding-left: 10px;
 }
 .design-features .text ul li {
     font-size: 16px;
@@ -433,6 +434,7 @@ header nav > i::before {
 .portfolio ul {
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 .portfolio ul li {
     padding: 10px;
@@ -515,8 +517,6 @@ header nav > i::before {
 /* vedio */
 .vedio-section {
     position: relative;
-    margin-top: var(--section-padding) ;
-    margin-bottom: var(--section-padding);
     overflow: hidden;
 }
 .vedio {
@@ -534,6 +534,7 @@ header nav > i::before {
 .vedio video {
     max-width: 100%;
 }
+
 .vedio-section .text {
     width: 100%;
     height: fit-content;
@@ -545,19 +546,37 @@ header nav > i::before {
     flex-direction: column;
     align-items: center;
     color: white;
+    text-align: center;
 }
+
 .vedio-section .text h3 {
-    font-weight: 500;
-    letter-spacing: 2px;
-    margin-top: 25px;
-    font-size: 23px;
+    margin-bottom: 0;
+    margin-top: 10px;
 }
+.vedio-section .text p {
+        margin: 10px 0;
+    }
 .vedio-section .text button {
     border: none;
     background-color: black;
     color: white;
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 0 0 6px;
+}
+@media (min-width:768px) {
+    .vedio-section .text h3 {
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    font-size: 23px;
+    }
+    .vedio-section .text button {
+        padding: 10px;
+        margin: 10px;
+    }
+    .vedio-section .text p {
+        margin: 16px 0;
+    }
 }
 /* vedio */
 /* about */
@@ -568,11 +587,12 @@ header nav > i::before {
 }
 .about img {
     position: relative;
-    bottom: -120px;
-    margin-top: -120px;
+    bottom: -70px;
+    margin-top: -90px;
     max-width: 100%;
+    left: -10px;
 } 
-@media (max-width:767px) {
+@media (min-width:520px) {
     .about img {
     bottom: -120px;
     margin-top: -120px;
@@ -674,7 +694,7 @@ header nav > i::before {
         margin-bottom: 20px;
     }
     .test-skill .test {
-        margin-bottom: 100px;
+        margin-bottom: 150px;
     }
 }
 .test-skill .test {
@@ -687,7 +707,7 @@ header nav > i::before {
 }
 .test-skill h2 {
     font-weight: normal;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 .test-skill h2+p {
     color: var(--text-fade-color);
@@ -827,7 +847,7 @@ header nav > i::before {
 .quote {
     background-image: url(../images/quote.jpg);
     background-size: cover;
-    padding: calc(var(--section-padding) + 50px);
+    padding: var(--section-padding) 0;
     position: relative;
 }
 .quote::after {
