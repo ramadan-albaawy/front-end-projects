@@ -1,0 +1,223 @@
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box ;
+    -moz-box-sizing: border-box ;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --main-padding : 50px;
+    --main-color: #2196f3 ;
+    --black-color :#191919 ;
+    --section-background-color :#ececec;
+    --transition-duration: 0.3s;
+
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+/* components */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+/* small screens */
+@media (min-width:768px) {
+    .container{
+        max-width: 750px;
+    }
+}
+/* medium screens */
+@media (min-width:992px) {
+    .container{
+        max-width: 970px;
+    }
+}
+/* large screens */
+@media (min-width:1200px) {
+    .container{
+        max-width: 1170px;
+    }
+}
+/* components */
+
+/* header */
+
+header {
+    background-color: white;
+}
+header .container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width:767px) {
+    header .container {
+        height: 111px;
+        justify-content: space-between;
+        flex-direction: column;
+    }   
+}
+header h1 {
+    margin: 0;
+    color: var(--main-color);
+}
+@media (max-width:767px) {
+    header h1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }    
+}
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    color: black;
+    display: block;
+    height: 50px;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+}
+header nav ul li a:hover::before {
+    left: 0;
+}
+header nav ul li a:hover {
+    background-color: var(--section-background-color);
+}
+
+@media (max-width:767px) {
+    header nav ul li a {
+        height: 50px;
+        font-size: 17px;
+        padding: 15px;
+    }
+}
+@media (max-width:415px) {
+    header nav ul li a {
+        padding: 10px;  
+        font-size: 14px;
+        line-height: 2;
+    }
+}
+
+/* header */
+/* landing */
+.landing {
+    height: calc(100vh - 50px);
+    position: relative;
+}
+@media (max-width:767px) {
+    .landing {
+        height: calc(100vh - 111px);
+    }
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--section-background-color);
+    z-index: -1;
+    transform: skewY(-6deg) translateY(-70px);
+    transform-origin: top;
+}
+.landing .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing .land-cont {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 150px;
+}
+@media (max-width:992px) {
+    .landing .land-cont {
+
+    }
+}
+.landing .container img {
+    max-width: 500px;
+}
+@media (max-width:992px) {
+    .landing .container img {
+    display: none;
+    }
+}
+.landing .container a i {
+    position: absolute;
+    bottom: 20px;
+    color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-down 1.5s  infinite ;
+}
+.landing .container .text h1 {
+        margin-top: 100px;
+}
+.landing .container .text h1 span {
+        color: var(--main-color);
+}
+.landing .container .text p {
+    line-height: 2;
+    font-size: 18px;
+    color: #777;
+    
+}
+@media (max-width:767px) {
+    .landing .container .text h1 {
+    }
+    .landing .container .text p {
+        font-size: 15;
+    }
+}
+@media (max-width:992px) {
+    .landing .container .text {
+    text-align: center;
+    }
+    
+}
+
+/* landing */
+/* animations */
+@keyframes scroll-down {
+    0%, 10%, 20%, 50%, 80%, 100% {
+        bottom:20px;
+    }
+    40%, 60% {
+        bottom:5px;
+    }
+    
+}
+/* animation */
