@@ -64,6 +64,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 @media (max-width:767px) {
     header .container {
@@ -88,7 +89,7 @@ header nav ul {
     display: flex;
 }
 
-header nav ul li a {
+header nav>ul>li>a {
     font-size: 18px;
     color: black;
     display: block;
@@ -98,7 +99,7 @@ header nav ul li a {
     position: relative;
     transition: 0.3s;
 }
-header nav ul li a::before {
+header nav>ul>li>a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -108,22 +109,22 @@ header nav ul li a::before {
     left: -100%;
     transition: 0.3s;
 }
-header nav ul li a:hover::before {
+header nav>ul>li>a:hover::before {
     left: 0;
 }
-header nav ul li a:hover {
+header nav>ul>li>a:hover {
     background-color: var(--section-background-color);
 }
 
 @media (max-width:767px) {
-    header nav ul li a {
+    header nav>ul>li>a {
         height: 50px;
         font-size: 17px;
         padding: 15px;
     }
 }
 @media (max-width:415px) {
-    header nav ul li a {
+    header nav>ul>li>a {
         padding: 10px;  
         font-size: 14px;
         line-height: 2;
@@ -131,6 +132,100 @@ header nav ul li a:hover {
 }
 
 /* header */
+/* mega-menu */
+
+header nav ul .mega-menu {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    padding: 30px;
+    background-color: white;
+    top: calc(100% + 50px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-bottom: 4px solid var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    transition: 0.5s;
+}
+@media (max-width:767px) {
+    header nav ul .mega-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+header nav>ul>.mega:hover>.mega-menu {
+    z-index: 2;
+    opacity: 1;
+    top: calc(100% + 1px);
+}
+header nav ul .mega-menu img {
+    max-width: 100%;
+}
+@media (max-width:992px) {
+    header nav ul .mega-menu img{
+        display: none;
+    }
+}
+header nav ul .mega-menu  ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 250px;
+
+}
+header nav ul .mega-menu  ul li {
+    font-size: 20px;
+}
+header nav ul .mega-menu  ul li a {
+    color: var(--main-color);
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+header nav ul .mega-menu  ul li a::before {
+    content: "";
+    position: absolute;
+    background-color: #fafafa;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+}
+header nav ul .mega-menu  ul li a:hover::before {
+    left: 0;
+}
+header nav ul .mega-menu ul li a:hover {
+    color: #7c6e66;
+}
+
+header nav ul .mega-menu  ul li:not(:last-child) {
+border-bottom: 1px solid var(--section-background-color);
+}
+
+@media (max-width:767px) {
+    header nav ul .mega-menu  ul:nth-of-type(1) li {
+        border-bottom: 1px solid var(--section-background-color);
+    }
+    header nav ul .mega-menu  ul:nth-of-type(2) li:not(:last-child) {
+    border-bottom: 1px solid var(--section-background-color);
+    }
+}
+
+
+header nav ul .mega-menu  ul li i {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+/* mega-menu */
 /* landing */
 .landing {
     height: calc(100vh - 50px);
@@ -148,7 +243,7 @@ header nav ul li a:hover {
     height: 100%;
     background-color: var(--section-background-color);
     z-index: -1;
-    transform: skewY(-6deg) translateY(-70px);
+    transform: skewY(-6deg) translateY(-110px);
     transform-origin: top;
 }
 .landing .container {
@@ -162,11 +257,7 @@ header nav ul li a:hover {
     flex-direction: row-reverse;
     margin-bottom: 150px;
 }
-@media (max-width:992px) {
-    .landing .land-cont {
 
-    }
-}
 .landing .container img {
     max-width: 500px;
     animation: up-down 1.5s infinite forwards;
@@ -187,6 +278,13 @@ header nav ul li a:hover {
 }
 .landing .container .text h1 {
         margin-top: 100px;
+        font-size: 40px;
+}
+@media (max-width:767px) {
+    .landing .container .text h1 {
+        font-size: 28px;
+    }
+    
 }
 .landing .container .text h1 span {
         color: var(--main-color);
@@ -198,8 +296,6 @@ header nav ul li a:hover {
     
 }
 @media (max-width:767px) {
-    .landing .container .text h1 {
-    }
     .landing .container .text p {
         font-size: 15;
     }
