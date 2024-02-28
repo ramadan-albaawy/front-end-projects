@@ -1319,9 +1319,6 @@ height: 4px;
         flex-direction: column;
     }
 }
-.videos .holder .list {
-
-}
 .videos .list .title {
     background-color: #f4f4f4;
     padding: 25px 15px;
@@ -1329,9 +1326,6 @@ height: 4px;
     justify-content: space-between;
     font-weight: 700;
     font-size: 20px;
-}
-.videos .list ul {
-
 }
 .videos .list ul li:not(:nth-child(1)) {
     background-color: #ffffff;
@@ -1366,6 +1360,180 @@ height: 4px;
     font-size: 20px;
 }
 /* vedios */
+/* stats */
+.stats {
+    padding: var(--section-padding) 0 var(--section-padding);
+    background-image: url(../images/stats.jpg);
+    background-size: cover;
+    position: relative;
+    min-height: 300px;
+}
+.stats::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  #ffffffde;
+}
+.stats h2 {
+    width: fit-content;
+    margin: 0 auto 50px;
+    font-size: 40px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width:767px) {
+    .stats h2  {
+        font-size: 30px;
+    }
+}
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+.stats .container .box {
+    background-color: white;
+    padding: 25px 15px;
+    text-align: center;
+    position: relative;
+    opacity: 0.8;
+}
+.stats .container .box:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.stats .container .box::before,
+.stats .container .box::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 0;
+    transition: 1s;
+    background-color: var(--main-color);
+}
+.stats .container .box::before {
+    top: 0;
+    left: 0;
+}
+.stats .container .box::after {
+    bottom: 0;
+    right: 0;
+}
+.stats .container .box:hover:before,
+.stats .container .box:hover:after {
+    height: 100%;
+}
+.stats .box span.number {
+    margin: 10px 0 10px;
+    display: block;
+    font-size: 50px;
+    font-weight: 600;
+}
+.stats .box span.name {
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* stats */
+/* Discount */
+.Discount {
+    /* min-height: 100vh; */
+}
+.Discount .holder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width:992px) {
+    .Discount .holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.Discount .holder .content {
+    position: relative;
+    z-index: 1; 
+    padding: 0 20px;
+} 
+.Discount .holder .img {
+    background-image: url(../images/discount-background1.jpg);
+    background-size:cover;
+    text-align: center;
+    position: relative;
+}
+.Discount .holder .img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: hwb(207 13% 5% / 0.95);
+}
+.Discount .holder .img h1 {
+    color: white;
+    font-size: 35px;
+    margin: 30px 0 60px;
+}
+.Discount .holder .img p {
+    color: white;
+    line-height: 1.6;
+    font-size: 20px;
+}
+.Discount .holder .img img {
+    max-width: 100%;
+    width: 365px;
+}
+.Discount .holder .form {
+    text-align: center;
+}
+.Discount .holder .form h1 {
+    color: black;
+    font-size: 35px;
+    margin: 30px 0 60px;
+}
+.Discount .holder .form form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;   
+    margin: 0 auto;
+}
+.Discount form input:not(:nth-last-child(1)),
+.Discount form textarea {
+    border: none;
+    outline: none;
+    padding: 13px;
+    border-bottom: 1px solid #7777;
+    background-color: #fbfbfb;
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+.Discount form textarea {
+    resize: none;
+}
+.Discount form input:nth-last-child(1) {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px;
+    border: navajowhite;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 20px; 
+    position: relative;
+    transition: 0.3s;
+}
+.Discount form input:nth-last-child(1):hover {
+    background-color: #1075c7;
+}
+/* Discount */
 /* animations */
 @keyframes up-down {
     50% {
