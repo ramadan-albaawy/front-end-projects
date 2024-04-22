@@ -1,0 +1,126 @@
+*,
+::before,
+::after {
+    -webkit-box-sizing: border-box ;
+    -moz-box-sizing: border-box ;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+body {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+}
+:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+.page {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+/* sidebar */
+.sidebar {
+    width: 250px;
+    box-shadow: 0 0 10px #ddd;
+}
+@media (max-width:767px) {   
+    .sidebar {
+    width: 62px;
+    padding: 10px;
+    }
+    .sidebar h3 {
+        padding: 0;
+        font-size: 16px;
+    }
+}
+@media (min-width:767px) {   
+    .sidebar h3::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.sidebar h3::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-sizing: content-box;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: black;
+}
+}
+@media (min-width:767px) {
+    .sidebar ul {
+    margin-top: 35px;
+}
+}
+.sidebar li {
+    margin-bottom: 5px;
+}
+.sidebar li a.active,
+.sidebar li a:hover {
+    background-color: #f6f6f6;
+    transition: 0.3s;
+}
+.sidebar li span {
+    margin-left: 10px;
+}
+/* end sidebar */
+/* start content */
+/* start head */
+
+.content .head .search-bar::after {
+    font-family:var(--fa-style-family,"Font Awesome 6 Free");
+    content: "\f002";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    left: 10px;
+}
+
+.content .head .search-bar input {
+    outline: none;
+    border: 1px solid rgb(63, 62, 62);
+    padding-left: 30px;
+    width: 170px;
+    transition-duration: 0.3s;
+}
+@media (min-width:768px) {
+    .content .head .search-bar input:focus {
+    width: 250px;
+}
+}
+
+.content .head .search-bar input:focus::placeholder {
+    color: transparent;
+    transition: 0.3s;
+}
+
+.content span.notification-icon::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+}
+
+/* end head */
+/* content */
