@@ -1,6 +1,25 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
 /* box */
+.d-block {
+    display: block;
+}
 .d-flex {
     display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .align-center {
     align-items: center;
@@ -8,6 +27,9 @@
 .between-flex {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.space-between {
     justify-content: space-between;
 }
 .d-grid {
@@ -20,11 +42,17 @@
 .p-relative {
     position: relative;
 }
+.p-absolute {
+    position: absolute;
+}
 .w-full {
     width: 100%;
 }
 .w-35 {
     width: 35px;
+}
+.w-fit {
+    width: fit-content;
 }
 /* position */
 /* .......................................................... */
@@ -35,8 +63,29 @@
 .mt-0 {
     margin-top: 0;
 }
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
 .mr-10 {
     margin-right: 10px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-40 {
+    margin-bottom: 40px;
 }
 .p-10 {
     padding: 10px;
@@ -53,8 +102,41 @@
 .bg-white {
     background-color: white;
 }
+.c-white {
+    color: white;
+}
 .c-black {
     color: black;
+}
+.c-blue {
+    color: var(--blue-color);
+}
+.c-orange {
+    color: var(--orange-color);
+}
+.c-gray {
+    color: var(--grey-color);
+}
+.c-green {
+    color: var(--green-color);
+}
+.c-red {
+    color: var(--red-color);
+}
+.bg-eee {
+    background-color: #eee;
+}
+.bg-blue {
+    background-color: var(--blue-color);
+}
+.bg-orange {
+    background-color: var(--orange-color);
+}
+.bg-green {
+    background-color: var(--green-color);
+}
+.bg-gray {
+    background-color: var(--grey-color);
 }
 /* colors */
 /* ................................................... */
@@ -71,9 +153,22 @@
 .fs-14 {
     font-size: 14px;
 }
+.fs-16 {
+    font-size: 16px;
+}
+.fs-25 {
+    font-size: 25px;
+}
+.fw-n {
+    font-weight: normal;
+}
+.fw-600 {
+    font-weight: 600;
+}
 .text-c {
     text-align: center;
 }
+
 /* fonts */
 /* .........................................*/
 
@@ -85,5 +180,14 @@
     .text-c-mobile {
         text-align: center;
     }
+    .block-mobile {
+        display: block;
+    }
 }
 /* media quieres */
+/* components */
+.btn-shape {
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+/* components */
