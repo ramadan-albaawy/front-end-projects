@@ -88,7 +88,6 @@
             </div>
             <h1 class="p-relative">Settings</h1>
             <div class="sett-container d-grid gap-20">
-
                 <div class="box-1 bg-white rad-10 p-10 p-20 block-mobile">
                     <h2 class="m-0">Site Control</h2>
                     <span class="c-gray fs-18 d-block mt-10 mb-20">Control The Website If There Is Maintenance</span>
@@ -117,12 +116,12 @@
                         <div class="d-flex between-flex align-center">
                             <input type="email" id="e-mail" class="p-10 w-full fs-14 rad-6 mb-20 mr-10"
                                 value="ramadanalbadawy@gmail.com" disabled>
-                            <a href="" class="fs-20 fw-600 mb-20 c-blue">Change</a>
+                            <a href="#security" class="fs-20 fw-600 mb-20 c-blue">Change</a>
                         </div>
                     </form>
                 </div>
 
-                <div class="box-3 bg-white rad-10 p-10 p-20 block-mobile">
+                <div class="box-3 bg-white rad-10 p-10 p-20 block-mobile" id="security">
                     <h2 class="m-0">Security Info</h2>
                     <span class="c-gray fs-18 d-block mt-10 mb-20">Security Information About Your Account</span>
                     <div class="pass d-flex between-flex mt-10 mb-20 p-10">
@@ -148,6 +147,104 @@
                             <p class="c-gray mt-10">Check The Login Devices List</p>
                         </div>
                         <a href="" class=" btn-shape fs-14 c-black">Devises</a>
+                    </div>
+                </div>
+
+                <div class="box-4 bg-white rad-10 p-10 p-20 block-mobile" id="social">
+                    <h2 class="m-0">Social Info</h2>
+                    <span class="c-gray fs-18 d-block mt-10 mb-20">Social Media Information</span>
+                    <div class=" site mb-20 rad-6 d-flex align-center">
+                        <i class="fa-brands fa-twitter center-flex c-grey"></i>
+                        <input type="email" placeholder="Twitter Username" class="">
+                    </div>
+                    <div class=" site mb-20 rad-6 d-flex align-center">
+                        <i class="fa-brands fa-facebook-f center-flex c-grey"></i>
+                        <input type="email" placeholder="Facebook Username" class="">
+                    </div>
+                    <div class=" site mb-20 rad-6 d-flex align-center">
+                        <i class="fa-brands fa-linkedin center-flex c-grey"></i>
+                        <input type="email" placeholder="Linked-in Username" class="">
+                    </div>
+                    <div class=" site mb-20 rad-6 d-flex align-center">
+                        <i class="fa-brands fa-youtube center-flex c-grey"></i>
+                        <input type="email" placeholder="Youtube Username" class="">
+                    </div>
+                </div>
+
+                <div class="box-5 bg-white rad-10 p-10 p-20 block-mobile">
+                    <h2 class="m-0">Widgets Control</h2>
+                    <span class="c-gray fs-18 d-block mt-10 mb-20">Show/Hide Widgets</span>
+                    <div class="control mb-15">
+                        <input type="checkbox" id="one" checked>
+                        <label for="one" class="check-box p-relative">
+                            Quick Draft
+                        </label>
+                    </div>
+                    <div class="control mb-15">
+                        <input type="checkbox" id="two" checked>
+                        <label for="two" class="check-box p-relative">
+                            Yearly Targets
+                        </label>
+                    </div>
+                    <div class="control mb-15">
+                        <input type="checkbox" id="three">
+                        <label for="three" class="check-box p-relative">
+                            Tickets Statistics
+                        </label>
+                    </div>
+                    <div class="control mb-15">
+                        <input type="checkbox" id="four">
+                        <label for="four" class="check-box p-relative">
+                            Latest News
+                        </label>
+                    </div>
+                    <div class="control mb-15">
+                        <input type="checkbox" id="five" checked>
+                        <label for="five" class="check-box p-relative">
+                            Latest Tasks
+                        </label>
+                    </div>
+                    <div class="control mb-15">
+                        <input type="checkbox" id="six">
+                        <label for="six" class="check-box p-relative">
+                            Top Search Items
+                        </label>
+                    </div>
+                </div>
+
+                <div class="box-6 bg-white rad-10 p-10 p-20 block-mobile">
+                    <h2 class="m-0">Backup Manager</h2>
+                    <span class="c-gray fs-18 d-block mt-10 mb-20">Control Backup Time And Location</span>
+                    <div class="time">
+                        <div class="radio">
+                            <input type="radio" id="day" value="day" name="time">
+                            <label class="p-relative" for="day">Daily</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="mounth" value="mounth" name="time" checked>
+                            <label class="p-relative" for="mounth">Mounthly</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="year" value="year" name="time">
+                            <label class="p-relative" for="year">Yearly</label>
+                        </div>
+                    </div>
+                    <div class="storage mt-10 block-mobile text-c-mobile between-flex">
+                        <input id="mega" type="radio" name="storage">
+                        <label class="option text-c block-mobile" for="mega">
+                            <i class="fa-solid fa-server d-block mb-10"></i><br>
+                            <label for="mega">Megaman</label>
+                        </label>
+                        <input id="zero" type="radio" name="storage" checked>
+                        <label class="option text-c block-mobile" for="zero">
+                            <i class="fa-solid fa-server d-block mb-10"></i><br>
+                            <label for="zero">Zero</label>
+                        </label>
+                        <input id="sigma" type="radio" name="storage">
+                        <label class="option text-c block-mobile" for="sigma">
+                            <i class="fa-solid fa-server d-block mb-10"></i><br>
+                            <label for="sigma">Sigma</label>
+                        </label>
                     </div>
                 </div>
             </div>
