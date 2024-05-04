@@ -701,6 +701,20 @@ a {
         gap: 10px;
     }
 }
+.sett-page .sett-container:hover>div:not(:hover){
+    opacity: 0.5;
+    filter: blur(1px);
+}
+.sett-page .sett-container>div:hover {
+    opacity: 1;
+    filter: blur(0px);
+    box-shadow: 0 0 3px;
+}
+.sett-page .sett-container>div {
+    transition: 0.8s;
+    
+}
+
 .sett-page .box-1 textarea {
     resize: none;
     min-height: 160px;
