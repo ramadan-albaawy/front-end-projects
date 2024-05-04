@@ -24,6 +24,7 @@
 .align-center {
     align-items: center;
 }
+
 .between-flex {
     display: flex;
     align-items: center;
@@ -60,6 +61,9 @@
 .m-0 {
     margin: 0;
 }
+.m-20 {
+    margin: 20px;
+}
 .mt-0 {
     margin-top: 0;
 }
@@ -87,11 +91,20 @@
 .mb-40 {
     margin-bottom: 40px;
 }
+.p-5 {
+    padding: 5px;
+}
 .p-10 {
     padding: 10px;
 }
 .p-20 {
     padding: 20px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pb-20 {
+    padding-bottom: 20px;
 }
 .gap-20 {
     gap: 20px;
@@ -135,9 +148,13 @@
 .bg-green {
     background-color: var(--green-color);
 }
+.bg-red {
+    background-color: var(--red-color);
+}
 .bg-gray {
     background-color: var(--grey-color);
 }
+
 /* colors */
 /* ................................................... */
 /* borders */
@@ -155,6 +172,12 @@
 }
 .fs-16 {
     font-size: 16px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-20 {
+    font-size: 20px;
 }
 .fs-25 {
     font-size: 25px;

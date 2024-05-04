@@ -14,6 +14,9 @@
     --green-color: #22c55e;
     --red-color: #f44336;
     --grey-color: #888;
+    --fa-style-family: "Font Awesome 6 Free";
+    --fa-style: 900;
+
 }
 ul {
     list-style: none;
@@ -107,7 +110,9 @@ a {
 /* end sidebar */
 /* start content */
 /* start head */
-
+.content {
+    overflow: hidden;
+}
 .content .head .search-bar::after {
     font-family:var(--fa-style-family,"Font Awesome 6 Free");
     content: "\f002";
@@ -171,7 +176,7 @@ a {
 }
 .wrapper {
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    margin: 0 20px 40px;
+    margin: 0 20px ;
 }
 @media (max-width:767px) {
     .wrapper {
@@ -447,7 +452,279 @@ a {
     }
 }
 /* project-progress */
+/* Reminders */
+.wrapper .Reminders li {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 2px solid var(--blue-color);
+}
+.wrapper .Reminders li.orange {
+    border-left-color: var(--orange-color);
+}
+.wrapper .Reminders li.red {
+    border-left-color: var(--red-color);
+}
+.wrapper .Reminders li.green {
+    border-left-color: var(--green-color);
+}
+.wrapper .Reminders li::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -37px;
+}
+.wrapper .Reminders li.orange::after {
+    background-color: var(--orange-color);
+}
+.wrapper .Reminders li.red::after {
+    background-color: var(--red-color);
+}
+.wrapper .Reminders li.green::after {
+    background-color: var(--green-color);
+}
+/* Reminders */
+
+
+/* Latest-Post */
+.wrapper .Latest-Post .person img {
+    width: 50px;
+}
+.wrapper .Latest-Post .content {
+    line-height: 1.8;
+    text-transform: capitalize;
+    min-height: 130px;
+    font-size: 18px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+/* Latest-Post */
+/* Social-Media */
+.wrapper .Social-Media .site .icon {
+    height: 50px;
+    width: 50px;
+    background-color: #1da1f2;
+}
+.wrapper .Social-Media .site .icon:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    transform: rotate(8deg);
+}
+.wrapper .Social-Media .site.face .icon {
+    background-color: #1877f2;
+}
+.wrapper .Social-Media .site.youtube .icon {
+    background-color: #ff0000;
+}
+.wrapper .Social-Media .site.in .icon {
+    background-color: #0a66c2;
+}
+
+
+.wrapper .Social-Media .site .stats {
+    flex: 1;
+}
+.wrapper .Social-Media .site.twitter .stats {
+    color: #1da1f2;
+}
+.wrapper .Social-Media .site.face .stats {
+    color: #1877f2;
+}
+.wrapper .Social-Media .site.youtube .stats {
+    color: #ff0000;
+}
+.wrapper .Social-Media .site.in .stats {
+    color: #0a66c2;
+}
+
+
+
+.wrapper .Social-Media .site.twitter {
+    background-color: hsla(203, 89%, 53%, 0.341);
+}
+.wrapper .Social-Media .site.face {
+    background-color: hsla(214, 89%, 52%, 0.341);
+}
+.wrapper .Social-Media .site.youtube {
+    background-color: hsla(0, 100%, 50%, 0.341);
+}
+.wrapper .Social-Media .site.in {
+    background-color: hsla(210, 90%, 40%, 0.341);
+}
+
+
+.wrapper .Social-Media .site a {
+    background-color: #1da1f2;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+}
+.wrapper .Social-Media .site.face a {
+    background-color: #1877f2;
+}
+.wrapper .Social-Media .site.youtube a {
+    background-color: #ff0000;
+}
+.wrapper .Social-Media .site.in a {
+    background-color: #0a66c2;
+}
+/* Social-Media */
+
+/* projects-taple */
+.projects-table .resposive-table {
+    overflow-x: auto;
+}
+.projects-table table {
+    min-width: 1000px;
+    width: 100%;
+    border-spacing: 0;
+}
+.projects-table table td {
+    padding: 20px;
+}
+.projects-table table tr span {
+    font-size: 13px;
+    padding: 4px 10px;
+}
+.projects-table table thead td {
+    background-color: #eee;
+    font-weight: 600;
+}
+.projects-table table tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+.projects-table table tbody td:last-child {
+    border-right: 1px solid #eee;
+}
+.projects-table table tbody tr:hover td {
+    background-color: #faf7f7;
+    transition: 0.3s;
+}
+.projects-table table img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+.projects-table table img:hover {
+    z-index: 3;
+    position: relative;
+}
+.projects-table table img:not(:nth-child(1)) {
+    margin-left: -19px;
+}
+/* projects-taple */
 /* content */
+
+/* ...................................................................................................................................... */
+/* ................................................................................................................................. */
+/* .................................................................................................................................... */
+/* ..................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* ......................................................settings Page.................................................................. */
+/* ...................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* ...................................................................................................................................... */
+/* components */
+/* toggle-button */
+.toggle-button {
+    width: fit-content;
+}
+.toggle-button input {
+    appearance: none;
+    position: absolute;
+}
+.toggle-button .toggle-shape {
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 80px;
+    background-color: #cccccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.toggle-button .toggle-shape::before {
+    position: absolute;
+    content: "\f00d";
+    font-family:var(--fa-style-family,"Font Awesome 6 Free");
+    font-weight:var(--fa-style,900);
+    display: flex;
+    color: #cccccc ;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+.toggle-button input:checked + .toggle-shape{
+    background-color: var(--blue-color);
+}
+.toggle-button input:checked + .toggle-shape::before{
+    content: "\f00c";
+    left: 53px;
+    color: var(--blue-color);
+}
+/* toggle-button */
+/* components */
+
+.sett-container {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin: 0 20px;
+    max-width: 100%;
+}
+@media (max-width:767px) {
+    .sett-container {
+        grid-template-columns: minmax(200px, 1fr);
+        margin: 0 10px;
+        gap: 10px;
+    }
+}
+.sett-page .box-1 textarea {
+    resize: none;
+    min-height: 160px;
+    font-size: 13px;
+    border-color: #cccccc ;
+}
+.sett-page .box-2 input {
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.sett-page .box-2 input:disabled {
+    cursor: not-allowed;
+}
+.sett-page .box-3 .pass a {
+    cursor: pointer;
+    padding: 4px 10px;
+}
+.sett-page .box-3 .pass a:hover {
+    background-color: var(--blue-alt-color);
+}
+.sett-page .box-3 .en-dis {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+.sett-page .box-3 .devices a {
+    background-color: #cccc;
+}
 
 /* Animation */
 @keyframes change-color {

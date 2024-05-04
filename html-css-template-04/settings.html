@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <!-- normalize css file -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <!-- framework -->
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- style css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <div class="page sett-page d-flex">
+        <div class="sidebar p-relative p-20 bg-white ">
+            <h3 class="p-20 p-relative mt-0 text-c">Romio</h3>
+            <ul>
+                <li>
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span class="mobile-none">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+                        <i class="fa-solid fa-gear fa-fw"></i>
+                        <span class="mobile-none">settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span class="mobile-none">profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+                        <i class="fa-solid fa-diagram-project fa-fw"></i>
+                        <span class="mobile-none">projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                        <span class="mobile-none">courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="friends.html">
+                        <i class="fa-regular fa-circle-user fa-fw"></i>
+                        <span class="mobile-none">Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="files.html">
+                        <i class="fa-regular fa-file fa-fw"></i>
+                        <span class="mobile-none">Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="plans.html">
+                        <i class="fa-regular fa-credit-card fa-fw"></i>
+                        <span class="mobile-none">Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content w-full">
+            <div class="head between-flex bg-white p-20">
+                <div class="search-bar p-relative">
+                    <input class="p-10 rad-10" type="search" placeholder="Type A Keyword">
+                </div>
+                <div class="icons d-flex align-center">
+                    <span class="notification-icon p-relative mr-10">
+                        <i class="fa-regular fa-bell fa-lg"></i>
+                    </span>
+                    <img class="w-35" src="images/avatar.png" alt="">
+                </div>
+            </div>
+            <h1 class="p-relative">Settings</h1>
+            <div class="sett-container d-grid gap-20">
+
+                <div class="box-1 bg-white rad-10 p-10 p-20 block-mobile">
+                    <h2 class="m-0">Site Control</h2>
+                    <span class="c-gray fs-18 d-block mt-10 mb-20">Control The Website If There Is Maintenance</span>
+                    <div class="cont between-flex">
+                        <div class="setting ">
+                            <h4 class="mb-10 mt-10">Website Control</h4>
+                            <p class="mb-20 c-gray">Open/Close Website And Type The Reason</p>
+                        </div>
+                        <div class="toggle-button">
+                            <input id="checkbox" type="checkbox">
+                            <label for="checkbox" class="toggle-shape"></label>
+                        </div>
+                    </div>
+                    <textarea class="p-10 w-full rad-6 mt-10" placeholder="close message content"></textarea>
+                </div>
+
+                <div class="box-2 bg-white rad-10 p-10 p-20 block-mobile">
+                    <h2 class="m-0">General Info</h2>
+                    <span class="c-gray fs-18 d-block mt-10 mb-20">General Information About Your Account</span>
+                    <form action="" class="form ">
+                        <label for="f-name" class="c-gray mb-10 d-block">First Name</label>
+                        <input type="text" id="f-name" class="p-10 w-full fs-14 rad-6 mb-20">
+                        <label for="l-name" class="c-gray mb-10 d-block">Last Name</label>
+                        <input type="text" id="l-name" class="p-10 w-full fs-14 rad-6 mb-20">
+                        <label for="e-mail" class="c-gray mb-10 d-block">E-mail</label>
+                        <div class="d-flex between-flex align-center">
+                            <input type="email" id="e-mail" class="p-10 w-full fs-14 rad-6 mb-20 mr-10"
+                                value="ramadanalbadawy@gmail.com" disabled>
+                            <a href="" class="fs-20 fw-600 mb-20 c-blue">Change</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="box-3 bg-white rad-10 p-10 p-20 block-mobile">
+                    <h2 class="m-0">Security Info</h2>
+                    <span class="c-gray fs-18 d-block mt-10 mb-20">Security Information About Your Account</span>
+                    <div class="pass d-flex between-flex mt-10 mb-20 p-10">
+                        <div>
+                            <h4>Password</h4>
+                            <p class="c-gray mt-10">Last Change On 25/10/2021</p>
+                        </div>
+                        <a class="bg-blue c-white btn-shape fs-18 rad-6">Change</a>
+                    </div>
+                    <div class="en-dis d-flex between-flex mt-10 mb-20 p-10">
+                        <div>
+                            <h4>Two-Factor Authentication</h4>
+                            <p class="c-gray mt-10">Enable/Disable The Feature</p>
+                        </div>
+                        <div class="toggle-button">
+                            <input id="en-dis" type="checkbox" checked>
+                            <label for="en-dis" class="toggle-shape"></label>
+                        </div>
+                    </div>
+                    <div class="devices d-flex between-flex mt-10 mb-20 p-10">
+                        <div>
+                            <h4>Devices</h4>
+                            <p class="c-gray mt-10">Check The Login Devices List</p>
+                        </div>
+                        <a href="" class=" btn-shape fs-14 c-black">Devises</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
