@@ -1,0 +1,242 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.bai-jamjuree-regular {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bai-jamjuree-semibold {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+@media (min-width:768) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* start header  */
+header {
+    height: 100vh;
+    background-image: url(../images/bg-header-desktop.png);
+    background-position: top;
+    background-size: cover;
+}
+header .white-layer {
+    background-image: linear-gradient(0deg, white 60%, transparent);
+}
+header .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header .container .logo {
+    margin: 120px 0 70px;
+}
+@media (max-width:767px) {
+    header .container .logo {
+        margin: 20px auto 20px;
+    }
+}
+header .container h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #3d3737;
+    margin: 0 auto 10px; 
+} 
+@media (max-width:767px) {
+    header .container h1 {
+        font-size: 32px;
+    }
+}
+header .container p {
+    font-size: 20px;
+    width: 72%;
+    line-height: 2;
+    color: gray;
+    margin: 10px auto 60px;
+}
+@media (max-width:767px) {
+    header .container p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+.btn a {
+    padding: 10px 20px;
+    border-radius: 32px;
+    font-size: 24px;
+    color: white;
+    margin: 15px;
+}
+.btn .ios {
+    background-color: #26bba4;
+}
+.btn .ios:hover {
+    box-shadow: 0px 6px 10px -4px #26bba4;
+}
+.btn .mac {
+    background-color: #8282c7;
+}
+.btn .mac:hover {
+    box-shadow: 0px 6px 10px -4px #8282c7;
+}
+/* end header  */
+/* start track */
+.track {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.titile {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.titile h2 {
+    font-size: 35px;
+    font-weight: 900;
+    margin: 0;
+}
+.titile p {
+    font-size: 22px;
+    width: 75%;
+    line-height: 1.5;
+    color: gray;
+    margin: 15px auto 10px;
+}
+.track-img img{
+    width: 100%;
+    padding: 10px 15px;
+}
+@media (min-width:768px) {
+    .track-img {
+        display: flex;
+        align-items: center;
+    }
+    .track-img img {
+        height: 100%;
+        width: 50%;
+        margin-left: -50px;
+    }
+    .track ul{
+        padding-left: 100px;
+    }
+}
+.track ul {
+    flex-direction: column;
+}
+.track ul li {
+    width: 80%;
+    margin-bottom: 20px;
+}
+@media (max-width:767px) {
+    .track ul {
+        padding: 0 15px;
+    }
+    .track ul li {
+        width: 100%;
+    }
+}
+.track ul li h3 {
+    margin: 0;
+    font-size: 23px;
+} 
+.track ul li p {
+    font-size: 18px;
+    line-height: 2;
+    color: gray;
+    margin: 0;
+}
+
+/* end track */
+/* sart access */
+.access {
+    /* padding-top: 60px; */
+    padding-bottom: 60px;
+    text-align: center;
+}
+.access img.image-devices {
+    max-width: 100%;
+}
+.access .three-option {
+    margin: 80px 0 50px;
+}
+@media (min-width:768px) {
+    .access .three-option {
+        display: grid;
+        grid-template-columns:  repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+.access .three-option div {
+    margin-bottom: 20px;
+}
+.access .three-option h4 {
+    margin: 10px 0 5px;
+}
+.access .three-option span {
+    margin: 0 auto ;
+    line-height: 1.5;
+    color: gray;
+}
+.access .comp-images {
+    margin: 50px auto 50px;
+}
+
+@media (min-width:768px) {
+    .access .comp-images {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+.access .comp-images img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.access .btn {
+    margin: 100px auto 50px;
+}
+
+/* end access */
+
+
