@@ -62,6 +62,9 @@ aside ul li {
         margin-bottom: 15px;
     }
 }
+aside li.active {
+    margin: 30px 0;
+}
 aside ul li:nth-child(1) {
     margin-bottom: 50px;
     pointer-events: none;
