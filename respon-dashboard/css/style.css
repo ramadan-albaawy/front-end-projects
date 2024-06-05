@@ -176,6 +176,7 @@ main .head .form input {
     border-radius: 20px;
     width: 100%;
     padding-left: 20px;
+    background-color: transparent;
 
 }
 main .head .form i {
@@ -190,12 +191,6 @@ main .head .form i {
     .head .pic {
         padding: 0;
     } */
-    main .head .form {
-        
-    }
-    main .head .form input {
-
-    }
 }
 main .head .pic {
     padding-left: 10px;  
@@ -210,14 +205,13 @@ main .content {
 }
 @media (max-width:767px) {
     main .content {
-        padding: 40px 5px;
+        padding: 40px 10px;
     }
 }
 main .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(200px, 1fr));
     gap: 20px;
-
 }
 main .content .box {
     padding: 30px;
@@ -269,7 +263,7 @@ main .content .box-container .box:hover i{
 }
 .content .details .box h2 {
     color: var(--blue);
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .content .details .taple a {
@@ -363,14 +357,59 @@ main .content .box-container .box:hover i{
     border-radius: 50%;
     margin-right: 10px;
 }
-.details .Customer li .inf {
-
-}
 .details .Customer li .inf .name {
     font-size: 17px;
 }
 .details .Customer ul .inf span {
     color: gray;
-
 }
 
+
+/* 
+============================================================================================
+============================================================================================
+============================================================================================
+============================================================================================
+================================== customer page ===========================================
+============================================================================================
+============================================================================================ 
+*/
+.customer-page .head {
+    margin-top: 5px;
+}
+.customer-page main {
+    padding: 0;
+}
+.customer-page main {
+
+    background-image: linear-gradient(to right, white 0%, #6e68ad 100%);
+}
+.customer-page main .content {
+    min-height: 100vh;
+}
+.customer-page .content .box {
+    background-color: white;
+}
+.customer-page main .head .form {
+    border: 1px solid black;
+} 
+.customer-page main .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+}
+@media (min-width:1117px) {
+    .customer-page main .box.b-3 {
+        grid-area: 1/3/3/5;
+        justify-content: space-evenly;
+    }
+    .customer-page main .box.b-4 {
+        grid-area: 3/3/4/5;
+        justify-content: space-evenly;
+    }
+    .customer-page main .box.b-5 {
+        grid-area: 4/1/4/5;
+        justify-content: space-evenly;
+    }
+}
